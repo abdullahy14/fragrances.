@@ -6,7 +6,10 @@
     "apps/client"
   ],
   "scripts": {
-    "dev": "npm run dev -w apps/server & npm run dev -w apps/client",
-    "build": "npm run build -w apps/server && npm run build -w apps/client"
+    "dev": "node scripts/run-dev.mjs",
+    "build": "npm run build -w apps/server && npm run build -w apps/client",
+    "start": "node scripts/run-start.mjs",
+    "start:server": "npm run start -w apps/server",
+    "start:client": "npm run dev -w apps/client"
   }
 }
